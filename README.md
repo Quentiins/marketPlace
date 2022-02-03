@@ -2,6 +2,14 @@
 
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
 
+## Répartition des tâches
+
+Nous avons suivi le tutoriel suivant : https://youtu.be/hSs3POz2bRo 
+
+**HTML** : Thomas JULIEN / Quentin SEURT
+**CSS** : Thomas JULIEN / Quentin SEURT
+**Javascript** : Thomas JULIEN / Quentin SEURT
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
