@@ -1,44 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css">
+    <title>E-commerce product page | Challenge | Frontendmentor.io</title>
 </head>
 <body>
+    <div class="container">
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+        <header>
+            <!-- Bouton burger -->
+            <div class="hamburger-logo-group">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
 
-  Sneaker Company
+                <img src="./images/logo.svg" alt="logo icon">
 
-  Fall Limited Edition Sneakers
+                <!-- Menu caché  -->
+                <nav class="menu hidden">
+                    <div class="slide-menu">
+                        <img id="btnMenuClose" src="./images/icon-close.svg" alt="icon close">
+                        <!-- Liste du menu -->
+                        <ul>
+                            <li><a href="#">Collections</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </div>
 
-  $125.00
-  50%
-  $250.00
+            <!-- Le panier -->
+            <div class="cart-avatar-group">
+                <div class="btnCart">
+                    <img src="./images/icon-cart.svg" alt="cart icon">
+                    <div class="cart-count hidden">3</div>
+                </div>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+                <img class="avatar" src="./images/image-avatar.png" alt="image avatar">
+            </div>
+
+            <!-- L'intérieur du panier -->
+            <div class="cart hidden">
+                <div class="cart-header">Cart</div>
+                <div class="products-in-cart">
+                </div>
+                <div class="msg-empty">Your cart is empty.</div>
+                <div class="checkout hidden">Checkout</div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <!-- La galerie -->
+            <section class="lightbox">
+                <img class="product-hero" src="./images/image-product-1.jpg" alt="image product">
+                <div class="previous arrow">
+                    <img src="./images/icon-previous.svg" alt="icon previous">
+                </div>
+                <div class="next arrow">
+                    <img src="./images/icon-next.svg" alt="icon next">
+                </div>
+                <div class="thumb-gallery">
+                    <div class="pic active">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-1">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-2">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-3">
+                    </div>
+                    <div class="pic">
+                        <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-4">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Informations du produit -->
+            <section class="product">
+                <div class="company-name">sneaker company</div>
+                <div class="title">Fall Limited Edition Sneakers</div>
+                <div class="description">
+                    These low-profile sneakers are your perfect casual wear companion.
+                    Featuring a durable rubber outer sole, they'll withstand everything 
+                    the weather can offer.
+                </div>
+                <!-- Prix et réduction -->
+                <div class="price-wrapper">
+                    <div class="group">
+                        <div class="price">$125.00</div>
+                        <div class="discount">50%</div>
+                    </div>
+                    <!-- Prix barré -->
+                    <div class="old-price">$250.00</div>
+                </div>
+
+                <!-- Bouton pour ajouter ou enlever une quantité ( ici les chaussures ) -->
+                <div class="count-btn-group">
+                    <div class="counter-wrapper">
+                        <img id="btnMinus" src="./images/icon-minus.svg" alt="icon minus">
+                        <div class="counter">1</div>
+                        <img id="btnPlus" src="./images/icon-plus.svg" alt="icon plus">
+                    </div>
+
+                    <!-- Bouton pour ajouter dans le panier -->
+                    <div class="btn">
+                        <img src="./images/icon-cart.svg" alt="icon cart">
+                        <p>Add to cart</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Overlay caché avec bouton de fermeture -->
+        <div class="overlay hidden">
+            <div class="btnClose">
+                <img id="btnOverlayClose" src="./images/icon-close.svg" alt="lightbox close">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
